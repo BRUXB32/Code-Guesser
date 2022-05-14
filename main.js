@@ -1,6 +1,7 @@
 let numeroRan;
 let temporal;
 let ingreso = "";
+#This fun will create a random number with Math
 function generateNumber() {
   numeroRan = Math.floor(Math.random() * 10000);
   temporal = numeroRan.toString();
@@ -11,19 +12,13 @@ function generateNumber() {
   }else if(temporal.length == 1){
     temporal = "000" + temporal;
   }
-  /*
-  if (temporal.length <= 1) {
-    temporal = "000" + temporal;
-  }else if (temporal.length <= 2) {
-    temporal = "00" + temporal;
-  }else {
-    temporal = "0" + temporal;
-  }
-*/
+
   document.getElementById('codigo').innerHTML = temporal;
 }
+//We call the fun to generate a numer at the start of the page. Take into account that if the script isn't loaded at the end of the body it won't work
 generateNumber();
 
+//This fun registers the number cliked, although it's on spanish the fun name means "Click made"
 function hizoClick(id) {
   
   if (ingreso.length < 4) {
@@ -31,10 +26,7 @@ function hizoClick(id) {
     document.getElementById('input').innerHTML = ingreso;
     console.log(ingreso);
   }
-  /*
-  ingreso = document.getElementById(id).id;
-  console.log(ingreso);
-  */
+
 }
 
 function borrarIngreso() {
@@ -47,13 +39,7 @@ function borrarTodo() {
   document.getElementById('input').innerHTML = ingreso;
   document.getElementById('succ').innerHTML = "Result...";
 }
-/*
-  else if (ingreso.length >= 4) {
-    ingreso = "";
-    ingreso = ingreso + document.getElementById(id).id ;
-    console.log(ingreso)
-  }
-*/
+
   function comparar() {
     if (ingreso == temporal) {
       document.getElementById('succ').innerHTML = "Codigo correcto";
@@ -63,9 +49,3 @@ function borrarTodo() {
         ingreso = "";
     }
   }
-
-  /*
-  console.log(document.getElementById(id).id);
-  arregloCod.push(document.getElementById(id).id);
-  console.log(arregloCod.length);
-*/
