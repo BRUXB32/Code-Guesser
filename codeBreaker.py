@@ -29,9 +29,11 @@ for x in range(len(cordenadasX)):
                 pyautogui.click()
                 pyautogui.moveTo(200, 270)
                 pyautogui.click()
+                pyautogui.moveTo(210, 288)
+                pyautogui.click()
 
 
-#ENTER =
+#ENTER = 210, 288
 #DELETE = 200, 270 - pyautogui.moveTo(200, 270)
 #0 = 200, 310 - pyautogui.moveTo(200, 310)
 #1 = 22, 270 - pyautogui.moveTo(22, 270)

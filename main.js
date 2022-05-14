@@ -1,7 +1,7 @@
 let numeroRan;
 let temporal;
 let ingreso = "";
-#This fun will create a random number with Math
+//This fun will create a random number with Math
 function generateNumber() {
   numeroRan = Math.floor(Math.random() * 10000);
   temporal = numeroRan.toString();
@@ -20,7 +20,7 @@ generateNumber();
 
 //This fun registers the number cliked, although it's on spanish the fun name means "Click made"
 function hizoClick(id) {
-  
+
   if (ingreso.length < 4) {
     ingreso = ingreso + document.getElementById(id).id ;
     document.getElementById('input').innerHTML = ingreso;
@@ -43,9 +43,9 @@ function borrarTodo() {
   function comparar() {
     if (ingreso == temporal) {
       document.getElementById('succ').innerHTML = "Codigo correcto";
-      ingreso = "";
+
     }else{
         document.getElementById('succ').innerHTML = "Codigo erroneo";
-        ingreso = "";
+        
     }
   }
